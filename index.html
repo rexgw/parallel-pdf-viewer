@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parallel PDF Viewer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+<div id="parallel"><div style="padding:40px;font-family:sans-serif">Loading viewer…</div></div>
+<script>
+window.PARALLEL = {
+  title: "Parallel PDF Viewer",
+  key: "my-site",          // any short name; keeps each visitor's pane choice separate per page
+  panes: 2,                // how many PDFs show at first (visitors can change it, 1 to 6)
+  layout: "side",          // "side" or "grid"
+  docs: [
+    // Put PDFs in the docs folder and list them here, for example:
+    // { title: "Report A", src: "docs/report-a.pdf" },
+    // { title: "Report B", src: "docs/report-b.pdf" }
+  ]
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
